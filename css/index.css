@@ -4,13 +4,14 @@ body {
 	font-size: 14px;
 }
 .headnav{
+	z-index: 9;
 	width: 90%;
 	height: 40px;
 	margin: auto;
-	background-color: none;
+	background-color:rgba(240, 251, 255, 0.39);
 	position: fixed;
 	margin-left: 5%;
-	position: relative;
+	position: absolute;
 	
 }
 
@@ -31,10 +32,11 @@ body {
 	/*margin-left: 110px;*/
 }
 .mainbody{
+	z-index: 1;
 	clear: left;
 	width: 90%;
-	background-color: blanchedalmond;
-	margin: 40px auto;
+	/*background-color: blanchedalmond;*/
+	margin:auto;
 }
 .footer{
 	width: 90%;
@@ -74,7 +76,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	height: 400px;
-	background-color:lightskyblue;
+	background-color:rgba(70, 169, 179, 0.34);
 	
 }
 .mynav a{
@@ -90,7 +92,7 @@ body {
 	float: right;
 	width: 80%;
 	height:400px;
-	background-color: lightsteelblue;
+	background-color: none;
 }
 /*
 .nav li a:hover+.subNav{

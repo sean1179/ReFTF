@@ -44,24 +44,28 @@ function shownav(){
 	nava[0].onmousemove = function(){
 					//alert(k);
 					getsubnav(0).className="zsubNav";
+					getsubnav(1).className="asubNav";
+					getsubnav(2).className="asubNav";
 					//alert(getsubnav(k).className);
 					}
-
+	/*
 	nava[0].onmouseout  = function(){
 					//alert(k);
 					getsubnav(0).className="asubNav";
 					//alert(getsubnav(i).className);
-					}
+					}*/
 	nava[1].onmousemove = function(){
 					//alert(k);
+					getsubnav(0).className="asubNav";
 					getsubnav(1).className="zsubNav";
+					getsubnav(2).className="asubNav";
 					//alert(getsubnav(k).className);
 					}
-
+/*
 	nava[1].onmouseout  = function(){
 					//alert(k);
 					getsubnav(1).className="asubNav";
 					//alert(getsubnav(i).className);
-					}
+					}*/
 }
 
