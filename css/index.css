@@ -89,6 +89,21 @@ body {
 	height:400px;
 	background-color: gray;
 }
+.btn-square-qq{
+	background-color: rgb(48, 138, 146);;
+}
+.btn-square-wechat{
+	background-color: green;
+}
+.btn-square-weibo{
+	background-color: orangered;
+}
+.btn-forgot{
+	margin-top: 8px;
+    float: right;
+    display: inline-block;
+}
+
 /*
 .nav li a:hover+.subNav{
 	display:block;

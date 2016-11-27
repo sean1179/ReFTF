@@ -69,8 +69,9 @@
 			<!-- logo结束-->
 			<div class="login">
 				<!-- 登陆按钮开始 -->
-				<button type="button"  id="login" class="btn btn-info login">登陆</button>
+				<button type="button"  id="login" class="btn btn-info login" data-toggle="modal" data-target=".bs-example-modal-sm">登陆</button>
 				<!-- 登陆按钮结束 -->
+				
 				<!-- 注册按钮开始 -->
 				<button type="button" id="sign" class="btn btn-primary login">注册</button>
 				<!-- 注册按钮结束 -->
@@ -250,6 +251,67 @@
             </div>
         </footer>
 		<!-- 网页页脚结束 -->
+		<!-- 登陆模态框开始 -->
+				<div class=" modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+				    <div class="modal-dialog ">
+						<div class="modal-content c-square">
+						<div class="modal-header c-no-border">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+						</div>
+						<div class="modal-body">
+							<h3 class="c-font-24 c-font-sbold">登入ReFTF</h3>
+							<p>开兴每一天_(:з」∠)_</p>
+							<form>
+								<div class="form-group">
+									<label for="login-email" class="hide">Username</label>
+									<input type="email" class="form-control input-lg c-square" id="login-email" placeholder="邮箱"> </div>
+								<div class="form-group">
+									<label for="login-password" class="hide">Password</label>
+									<input type="password" class="form-control input-lg c-square" id="login-password" placeholder="密码"> </div>
+								<div class="form-group">
+									<div class="c-checkbox">
+										<input type="checkbox" id="login-rememberme" class="c-check">
+										<label for="login-rememberme" class="c-font-thin c-font-17">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span> 记住我 </label>
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">登入</button>
+									<a href="javascript:;" data-toggle="modal" data-target="#forget-password-form" data-dismiss="modal" class="btn-forgot">忘记密码 ?</a>
+								</div>
+								<div class="clearfix">
+									<div class="c-content-divider c-divider-sm c-icon-bg c-bg-grey c-margin-b-20">
+										<span>或用以下方式登入</span>
+									</div>
+									<ul class="c-content-list-adjusted">
+										<li>
+											<a class="btn btn-block btn-square-qq btn-social btn-google">
+												<i class="fa fa-qq"></i>QQ</a>
+										</li>
+										<li>
+											<a class="btn btn-block btn-square-wechat btn-social btn-dropbox">
+												<i class="fa fa-weixin"></i>WeChat</a>
+										</li>
+										<li>
+											<a class="btn btn-block btn-square-weibo btn-social btn-foursquare">
+												<i class="fa fa-weibo"></i>Weibo</a>
+										</li>
+									</ul>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer c-no-border">
+							<span >还没有账户 ?赶快注册吧</span>
+							<a href="javascript:;" data-toggle="modal" data-target="#signup-form" data-dismiss="modal" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-bold c-btn-slim c-btn-border-2x c-btn-square c-btn-signup">注册!</a>
+						</div>
+					</div><!-- /.modal-content -->
+				    </div><!-- /.modal-dialog -->
+				</div>
+				<!-- 登陆模态框结束-->
 	</body>
 	<script>
 		window.onload = shownav();
