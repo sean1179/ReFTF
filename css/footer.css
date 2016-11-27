@@ -1,0 +1,36 @@
+.footer{
+	margin-top: 50px;
+}
+.footer-container{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #F7F7F7;
+}
+.footer-head{
+	margin: 0px 0 0 20px;
+}
+.footer-logo{
+	
+}
+.footer-footer{
+	background-color: lightgray;
+}
+.footer-h{
+	padding-left: 10px;
+}
+.line{
+	width: 80%;
+	margin: 0 auto;
+	height: 2px;
+	background-color: white;
+	margin-top:5px ;
+}
+.c-address{
+	margin: 10px 0 10px 40px;
+}
+.last{
+	height:100px
+}
+.last-text{
+	margin-left: 12%;
+}
