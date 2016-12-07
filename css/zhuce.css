@@ -1,0 +1,38 @@
+		.block{
+			width: 650px;
+			height: 500px;
+			margin: 0 auto;
+			background-color:#A1DEF8;
+			margin-top: 50px;
+		}
+			.shang{
+				width:600px;
+				height:30px;
+				text-align:center;
+				font-size:22px;
+				color:#111111;
+				padding-top:10px;
+
+				}
+			.zuo{
+				display:inline;
+				
+				float:left;
+				width:200px;
+				height:470px;
+				font-size:15.5px;
+				text-align:right;
+				line-height:150%;
+				}
+			.you{
+				display:inline;
+				float:left;
+				width:380px;
+				height:470px;
+				padding-left:20px;
+				font-size:15.5px;
+				}
+			.xia{
+				margin-bottom: 0;
+				text-align: center;
+			}
