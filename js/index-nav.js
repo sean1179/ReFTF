@@ -7,6 +7,7 @@ function getsubnav(a){
 	for (var i=0 ; i<allclass.length ; i++){
 		if(reg.test(allclass[i].className)){
 			//alert(allclass[i].className);
+			allclass[i].className="asubNav";
 			subnav.push(allclass[i]);
 			//alert(allclass[i]);
 		}
@@ -24,23 +25,26 @@ function shownav(){
 	for(var i =0;i<navli.length;i++){
 		//alert(navli[i].getElementsByTagName("a"));
 		nava.push(navli[i].getElementsByTagName("a")[0]);
-	}/*
+	}
 	for(var i =0;i<nava.length;i++){
+		nava[i].index=i;
 		//alert(nava[i].className);
-		nave[i].k = i;
 		nava[i].onmousemove = function(){
 					//alert(k);
-					getsubnav(k).className="zsubNav";
+					getsubnav(this.index).className="zsubNav";
 					//alert(getsubnav(k).className);
 					}
 
-		nava[i].onmouseout  = function(){
+		/*nava[i].onmouseout  = function(){
 					//alert(k);
-					getsubnav(k).className="asubNav";
+					getsubnav(this.index).className="asubNav";
 					//alert(getsubnav(i).className);
-					}
-		
-	}*/
+					}*/
+		/*nava[i].onclick = function(){
+					getsubnav(this.index).className="zsubNav";
+					}*/
+	}
+	/*
 	nava[0].onmousemove = function(){
 					getsubnav(0).className="zsubNav";
 					getsubnav(1).className="asubNav";
@@ -48,11 +52,8 @@ function shownav(){
 					getsubnav(3).className="asubNav";
 					//alert(getsubnav(k).className);
 					}
-	/*
-	nava[0].onmouseout  = function(){
-					getsubnav(0).className="asubNav";
-					//alert(getsubnav(i).className);
-					}*/
+	
+	
 	nava[1].onmousemove = function(){
 					getsubnav(0).className="asubNav";
 					getsubnav(1).className="zsubNav";
@@ -60,11 +61,8 @@ function shownav(){
 					getsubnav(3).className="asubNav";
 					//alert(getsubnav(k).className);
 					}
-/*
-	nava[1].onmouseout  = function(){
-					getsubnav(1).className="asubNav";
-					//alert(getsubnav(i).className);
-					}*/
+
+	
 	nava[2].onmousemove = function(){
 					getsubnav(0).className="asubNav";
 					getsubnav(1).className="asubNav";
@@ -79,5 +77,6 @@ function shownav(){
 					getsubnav(3).className="zsubNav";
 					//alert(getsubnav(k).className);
 					}
+					*/
 }
 
