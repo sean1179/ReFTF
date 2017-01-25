@@ -49,7 +49,7 @@ function checkRepassword(){
 //验证手机号码(以一开头的十一位纯数字)
 function checkPhone(){
 	var phone=document.getElementById("phone").value.trim();
-	var phonetest=var reg = /^1[0-9]{10}$/;
+	var phonetest=/^1[0-9]{10}$/;
 	if(!phonetest.test(phone)){
 		document.getElementById("phoneInfo").innerHTML="号码必须是以一开头的十一位数字";
 	}else{
