@@ -23,13 +23,14 @@ function checkUserName(){
 function checkPassword(){
     var password=document.getElementById("password").value.trim();
     //var password=$("#password").value;
-    $("#passwordInfo").innerHTML="";
+    //$("#passwordInfo").innerHTML="";
     //密码长度在8个字符到16个字符，由字母、数字和".""-""_""@""#""$"组成
     //var passwordtest=/^[0-9A-Za-z.\-\_\@\#\$]{8,16}$/;
     //密码长度在8个字符到16个字符，由字母、数字和"_"组成
-    var passwordtest=/^[0-9A-Za-z_]\w{7,15}$/;
+    var passwordtest=/^[0-9A-Za-z.\-\_\@\#\$]{8,16}$/;
     if(!passwordtest.test(password)){
         document.getElementById("passwordInfo").innerHTML="密码长度必须在8个字符到16个字符之间,由字母数字下划线组成";
+        return true;
     }else{
         document.getElementById("passwordInfo").innerHTML="";
     }
@@ -38,11 +39,12 @@ function checkPassword(){
 //验证校验密码（和上面密码必须一致）
 function checkRepassword(){
     var repassword=document.getElementById("repassword").value.trim();
+    var password=document.getElementById("password").value.trim();
     //校验密码和上面密码必须一致
-    if(repassword!==password){
+    if(repassword != password){
         document.getElementById("repasswordInfo").innerHTML="两次输入的密码不一致";
     }else if(repassword==password){
-        document.getElementById("repasswordInfo").innerHTML="";
+        document.getElementById("repasswordInfo").innerHTML="验证通过";
     }
 }
 
