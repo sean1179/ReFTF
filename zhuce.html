@@ -3,117 +3,107 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>用户注册</title>
-		<link rel="stylesheet" href="./css/zhuce.css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>欢迎来到ReFTF</title>
+		<link href="./plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/zhuce.css" />
 	</head>
-
 	<body>
-		<div class="block">
-			<div class="shang"><strong>用户注册</strong></div>
-			<div class="zuo">
-				<p><a style="color:#F00;">*</a>用户名称</p>
-				<p><a style="color:#F00">*</a>真实姓名</p>
-				<p><a style="color:#F00">*</a>出生时间</p>
-				<p><a style="color:#F00">*</a>性别</p>
-				<p><a style="color:#F00">*</a>登录密码</p>
-				<p><a style="color:#F00">*</a>确认密码</p>
-				<p><a style="color:#F00">*</a>E-mail</p>
-				<p>电话</p>
-				<p>QQ</p>
+		<!--
+        	作者：1592158873@qq.com
+        	时间：2017-01-24
+        	描述：注册界面
+        -->
+	<div class="container ">
+    <form class="form-horizontal "  role="form">
+        <div class="form-group">
+        <div class="col-sm-13" >
+            <legend class="title" >ReFTF用户注册信息</legend>
+        </div>
+        </div>
+		<!--用户名开始-->
+        <div class="form-group col-sm-12">
+            <label for="username" class="col-sm-4 control-label">用户名：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="username" onblur="checkUserName()" placeholder="请输入用户名"/>
+            </div>
+            <div class="col-sm-4">
+                <span id="nameInfo"></span>
+            </div>
+        </div>
+        <!--用户名结束-->
+        
+        <!--密码开始-->
+        <div class="form-group col-sm-12">
+            <label for="password" class="col-sm-4 control-label">密码：</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="password"  onblur="checkRepassword()" placeholder="请输入密码"/>
+            </div>
+            <div class="col-sm-4">
+                <span id="passwordInfo"></span>
+            </div>
 
-			</div>
-			<div class="you">
-				<p>
-					<input type="text" name="textfield" id="rule2" />
-				</p>
-				<p>
-					<input type="text" name="rule" id="rule" />
-				</p>
-				<p>
-					<select name="select" id="select">
-						<option>1996</option>
-						<option>1997</option>
-						<option>1998</option>
-						<option>1999</option>
-						<option>2000</option>
-						<option>2001</option>
-					</select>
-					<select name="select2" id="select2">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-						<option>11</option>
-						<option>12</option>
-					</select>
-					<select name="select3" id="select3">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-						<option>11</option>
-						<option>12</option>
-						<option>13</option>
-						<option>14</option>
-						<option>15</option>
-						<option>16</option>
-						<option>17</option>
-						<option>18</option>
-						<option>19</option>
-						<option>20</option>
-						<option>21</option>
-						<option>22</option>
-						<option>23</option>
-						<option>24</option>
-						<option>25</option>
-						<option>26</option>
-						<option>27</option>
-						<option>28</option>
-						<option>29</option>
-						<option>30</option>
-						<option>31</option>
-					</select>
-				</p>
-				<p>男
-					<input type="radio" name="radio" id="radio" value="radio" /> 女
-					<input type="radio" name="radio" id="radio2" value="radio" />
-				</p>
-				<p>
-					<input type="text" name="rule2" id="rule3" />
-				</p>
-				<p>
-					<input type="text" name="rule3" id="rule4" />
-				</p>
-				<p>
-					<input type="text" name="rule4" id="rule5" />
-				</p>
-				<p>
-					<input type="text" name="rule5" id="rule6" />
-				</p>
-				<p>
-					<input type="text" name="rule6" id="rule7" />
-				</p>
-				<p>注册说明：带“<a style="color:#F00">*</a>”项为必填项</p>
-				<input style="margin-left:150px;" align="middle" type="button" value="确定">
-			</div>
-		</div>
-		<div class="xia">
-				<p >2016 © ReFTF
-					<span>All Rights Reserved.</span>
-				</p>
-			</div>
+        </div>
+        <!--密码结束-->
+        
+        <!--校验密码开始-->
+        <div class="form-group col-sm-12">
+            <label for="repassword" class="col-sm-4 control-label">校验密码：</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="repassword" onblur="checkRepassword()" placeholder="请再次输入密码">
+            </div>
+            <div class="col-sm-4">
+                <span id="repasswordInfo"></span>
+            </div>
+        </div>
+        <!--校验密码结束-->
+        
+        <!--联系方式开始-->
+        <div class="form-group col-sm-12">
+            <label for="phone" class="col-sm-4 control-label">联系方式：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="phone" onblur="checkPhone()" placeholder="请输入手机号码">
+            </div>
+            <div class="col-sm-4">
+                <span id="phoneInfo"></span>
+            </div>
+        </div>
+        <!--联系方式结束-->
+        
+        <!--学院开始-->
+        <div class="form-group col-sm-12">
+            <label  for="school" class="col-sm-4 control-label">学院：</label>
+            <div class="col-sm-4">
+                <select id="school">
+                    <option value="minjiang">闽江学院</option>
+                    <option value="fuzhi">福州职业技术学院</option>
+                    <option value="jiangxia">江夏学院</option>
+                    <option value="zhongyiyao">福建中医药大学</option>
+                    <option value="fuda">福州大学</option>
+                </select>
+            </div>
+        </div>
+		<!--学院结束-->
+        
+		<!--按钮开始-->
+        <div class="form-group col-sm-12">
+        	<label for="submit" class="col-sm-4 control-label"></label>
+            <div class=" col-sm-4">
+                <button type="submit" id="submit" class="btn btn-success col-sm-12" onclick="validateForm()">注册成为ReFTF用户</button>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-sm-4">
+                <span></span>
+            </div>
+    	</div>
+    	<!--按钮结束-->
+	</form>
+</div>
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/zhuce.js"></script>
 	</body>
 
 </html>
