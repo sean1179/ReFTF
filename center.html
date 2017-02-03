@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>用户中心</title>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
         <link href="./plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
         <link href="./plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="./plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
         <link href="./plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/center.css">
+        <link rel="stylesheet" href="assets/css/tabs/tabs-vertical.css">
         <link rel="stylesheet" href="./css/index.css" />
 		<link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="css/components.css" />
@@ -22,41 +26,13 @@
 		<script type="text/javascript" src="js/index-nav.js" ></script>
 	</head>
 	<body>
-				<!-- 导航条开始 -->
+		<!-- 导航条开始 -->
 		<div class="headnav">
 			<!-- logo开始-->
 			<div class="logo">
 				<a href="index.html" class="logo-a">
 					<img src="imgs/ReFTF.png" class="logo-img" />
 				</a>
-				<!-- 
-                	作者：sean1179@sina.com
-                	时间：2016-11-26
-                	描述：一级菜单的的列表
-                -->
-				<ul class="mynav nav .nav-pills" id="nav">
-				    <li><a href="#">一级菜单一</a>
-				    	<!--<div class="subNav"></div>-->
-				    </li>
-				    <li><a href="#">一级菜单二</a>
-				    	<!--<div class="subNav"></div>-->
-				    </li>
-				    <li><a href="#">一级菜单三</a>
-				    	<!--<div class="subNav"></div>-->
-				    </li>
-				    <li><a href="#">一级菜单四</a>
-				    	<!--<div class="subNav"></div>-->
-				    </li>
-				</ul>
-				<!--
-                	作者：sean1179@sina.com
-                	时间：2016-11-26
-                	描述：二级菜单的块
-                -->
-				<div class="asubNav" >二级菜单页面一</div>
-				<div class="asubNav" >二级菜单页面二</div>
-				<div class="asubNav" >二级菜单页面三</div>
-				<div class="asubNav" >二级菜单页面四</div>
 			</div>
 			<!-- logo结束-->
 			<div class="login">
@@ -71,8 +47,81 @@
 			
 		</div>
 		<!-- 导航条结束  -->
+
 		<!--选项卡开始-->
-		
+	<div class="jq22-container">
+		<!--中间部分开始-->
+		<div class="middle">
+			
+		</div>
+		<!--中间部分结束-->
+		<div class="tabs-vertical">
+			<ul>
+				<li>
+					<a class="tab-active" data-index="0" href="#">资料设置</a>
+				</li>
+				<li>
+					<a data-index="1" href="#">修改密码</a>
+				</li>
+				<li>
+					<a data-index="2" href="#">我的发布</a>
+				</li>
+			</ul>
+			<!--第一个选项卡开始-->
+			<div class="tabs-content-placeholder">
+
+			<div class="tab-content-active">
+					<p>Tabs Information 1</p>
+					<img src="assets/images/pictures/industrial-mech.jpg" alt="industrial">
+			</div>
+			<!--第一个选项卡结束-->
+			<!--第二个选项卡开始-->
+				<div>
+					<p>Tabs Information 2</p>
+					<img src="assets/images/pictures/colosseum.jpg" alt="Colosseum">
+				</div>
+			<!--第二个选项卡结束-->
+			<!--第三个选项卡开始-->
+				<div>
+					<p>Tabs Information 3</p>
+					<img src="assets/images/pictures/sahale-wa.jpg" alt="Sahale Wa">
+				</div>
+			<!--第三个选项卡结束开始-->
+			</div>
+
+	</div>
+</div>
+
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script>
+
+	$(document).ready(function() {
+
+		var widget = $('.tabs-vertical');
+
+		var tabs = widget.find('ul a'),
+			content = widget.find('.tabs-content-placeholder > div');
+
+		tabs.on('click', function (e) {
+
+			e.preventDefault();
+
+			// Get the data-index attribute, and show the matching content div
+
+			var index = $(this).data('index');
+
+			tabs.removeClass('tab-active');
+			content.removeClass('tab-content-active');
+
+			$(this).addClass('tab-active');
+			content.eq(index).addClass('tab-content-active');
+
+		});
+
+	});
+
+</script>
+
 		<!--选项卡结束-->
 	</body>
 </html>
